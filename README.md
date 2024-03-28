@@ -12,6 +12,12 @@
 
 ## Component Heirarchy
 
+![Tree](https://i.imgur.com/pVFRE6R.jpeg)
+
 ## Wireframes
 
-![Wireframes](https://i.imgur.com/7H4jIcy.png)
+![Landing](https://i.imgur.com/LOX5DYJ.jpeg)
+
+![Genre Index](https://i.imgur.com/6dJSO63.jpeg)
+
+![Show Show](https://i.imgur.com/5uHDiTt.jpeg)
