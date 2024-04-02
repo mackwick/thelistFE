@@ -6,7 +6,7 @@ function Footer(props) {
       <Link to={"index"} className="footer-item footer-one">
         <button>The Whole List</button>
       </Link>
-      <div>
+      <div className="footer-item footer-two">
         <h2>Placeholder: Roulette The List</h2>
       </div>
       <div className="footer-item footer-three">
