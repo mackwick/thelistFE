@@ -11,7 +11,7 @@ function UpdateForm(props) {
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" defaultValue={aShow.name} />
 
-        {/* <fieldset name="type" id="type">
+        <fieldset name="type" id="type">
           <legend>Is it a TV show or a movie?</legend>
 
           <div>
@@ -37,9 +37,9 @@ function UpdateForm(props) {
           <option value="drama">Drama</option>
           <option value="horror">Horror/Thriller</option>
           <option value="reality">Reality/Documentary</option>
-          <option value="weird">Just weird</option>
+          <option value="scifi">Science Fiction</option>
           <option value="other">Other/Unsure</option>
-        </select> */}
+        </select>
 
         <label htmlFor="recby">Who recommended this?</label>
         <input type="text" name="recby" id="recby" defaultValue={aShow.recby} />

@@ -30,11 +30,12 @@ export const CreateAction = async ({ request }) => {
 export const UpdateAction = async ({ request, params }) => {
   const formData = await request.formData();
   const id = params.id;
+  console.log(URL + id);
 
   const updatedShow = {
     name: formData.get("name"),
-    type: formData.get("type"),
-    genre: formData.get("genre"),
+    type: "tv show",
+    genre: "drama",
     recby: formData.get("recby"),
   };
 

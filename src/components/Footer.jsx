@@ -11,6 +11,9 @@ function Footer(props) {
       </div>
       <div className="footer-item footer-three">
         <h2>Placeholder: graphic and info</h2>
+        <Link to="/">
+          <button>Back to main</button>
+        </Link>
       </div>
     </div>
   );
