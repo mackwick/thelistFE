@@ -1,13 +1,15 @@
 import Show from "../components/Show";
 import { useLoaderData, Link } from "react-router-dom";
 
-function Main(props) {
+function Index(props) {
   const allShows = useLoaderData();
   return (
     <>
-      <h1>Main Lorem ipsum dolor, sit amet consectetur</h1>
+      {allShows.map((show, i) => (
+        <Show show={show} key={i} />
+      ))}
     </>
   );
 }
 
-export default Main;
+export default Index;
