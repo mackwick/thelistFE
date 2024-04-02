@@ -20,8 +20,8 @@ body {
   align-items: center;
   height: 100dvh;
   background-image: linear-gradient(
-      rgba(201, 153, 93, 0.3),
-      rgba(201, 153, 93, 0.3)
+      rgba(194, 114, 16, 0.3),
+      rgba(194, 114, 16, 0.3)
     ),
     url(./images/90688DFE-46D2-410F-969A-FCB3AE3230DA.jpeg);
   background-position: center;
@@ -55,4 +55,31 @@ button {
   font-style: normal;
   font-size: 72px;
   color: var(--primary-orange);
+}
+
+.footer {
+  border-top: 2px solid var(--primary-brown);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-item {
+  width: 30%;
+}
+
+.footer-one {
+  border-right: 2px solid var(--primary-brown);
+}
+
+.footer-three {
+  border-left: 2px solid var(--primary-brown);
+}
+
+.footer-one,
+.footer-two,
+.footer-three {
+  height: 100px;
 }

@@ -9,11 +9,13 @@ import Show from "./pages/Show";
 import { indexLoader, showLoader } from "./loaders";
 import { CreateAction, DeleteAction, UpdateAction } from "./actions";
 import CreateForm from "./components/CreateForm";
+import Index from "./components/Index";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Landing />} loader={indexLoader} />
+      <Route path="" element={<Landing />} />
+      <Route path="index" element={<Index />} loader={indexLoader} />
       <Route path="/:id" element={<Show />} loader={showLoader} />
       <Route path="create" element={<CreateForm />} action={CreateAction} />
       <Route path="update/:id" action={UpdateAction} />
