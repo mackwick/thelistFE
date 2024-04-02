@@ -7,7 +7,7 @@ function UpdateForm(props) {
   return (
     <>
       <h2>Update this</h2>
-      <Form action={`/update/${id}/`} method="put">
+      <Form action={`/update/${id}/`} method="post">
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" defaultValue={aShow.name} />
 
