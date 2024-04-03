@@ -1,7 +1,6 @@
 :root {
   --primary-orange: #dc8920;
   --primary-light: #f6ecd8;
-  --primary-purple: #4d243d;
   --primary-brown: #5c573e;
 }
 
@@ -44,6 +43,21 @@ button {
   cursor: pointer;
   border-radius: 6px;
   padding: 8px 12px;
+}
+
+button:hover {
+  background-color: #dc8b20c7;
+}
+
+.router-link {
+  text-decoration: none;
+  font: inherit;
+  color: var(--primary-dark);
+}
+
+.router-link:hover {
+  color: #5c573ec0;
+  cursor: pointer;
 }
 
 .header-container {
@@ -123,8 +137,14 @@ button {
 
 .genre-box {
   width: 30%;
-  height: 100px;
+  height: 150px;
   padding: 10px 10px;
+}
+
+.router-link > img {
+  height: 120px;
+  width: 140px;
+  border-radius: 6px;
 }
 
 /*FORMS*/
@@ -169,4 +189,33 @@ select {
 .add-button > Button,
 .update-button > Button {
   width: 30%;
+}
+
+/*SHOW*/
+
+.show-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-brown);
+  padding: 20px 10px;
+}
+
+.show-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.show-options > button,
+.show-options button {
+  width: 200px;
+  height: 50px;
+  margin: 0 10px;
 }
