@@ -6,7 +6,7 @@ function Other(props) {
   const others = allShows.filter((show) => show.genre === "other");
   return (
     <>
-      {other.map((show, i) => (
+      {others.map((show, i) => (
         <Show show={show} key={i} />
       ))}
     </>
