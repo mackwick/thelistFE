@@ -19,7 +19,7 @@ import Scifi from "./components/Scifi";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />} loader={indexLoader}>
       <Route path="" element={<Landing />} />
       <Route path="index" element={<Index />} loader={indexLoader} />
       <Route path="comedy" element={<Comedy />} loader={indexLoader} />

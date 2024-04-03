@@ -5,7 +5,7 @@ function Show({ show }) {
 
   return (
     <div>
-      <Link to={`/${id}/`}>
+      <Link className="router-link" to={`/${id}/`}>
         <h1>{show.name}</h1>
       </Link>
     </div>

@@ -67,12 +67,29 @@ button:hover {
   padding-bottom: 20px;
 }
 
-.header-container > h1 {
+.header-container > .router-link > #site-heading {
   font-family: "Chicle", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 72px;
   color: var(--primary-orange);
+}
+
+.header-container > .router-link > h4 {
+  text-align: right;
+  font-size: small;
+  color: var(--primary-orange);
+}
+
+.router-link > #add-it {
+  color: var(--primary-orange);
+  font-size: medium;
+}
+
+.header-container > .router-link > h4:hover,
+.header-container > .router-link > #site-heading:hover,
+.router-link > #add-it:hover {
+  color: #dc8b20c7;
 }
 
 .footer {
@@ -104,6 +121,18 @@ button:hover {
 .footer-three {
   height: 100px;
   font-size: 14px;
+}
+
+.router-link > .retro-pin {
+  height: 85px;
+  width: 140px;
+  border-radius: 6px;
+}
+
+.footer-item > .big-button {
+  height: 110px;
+  width: 145px;
+  border-radius: 6px;
 }
 
 /*MAIN*/

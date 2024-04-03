@@ -1,20 +1,29 @@
 import { Link } from "react-router-dom";
+import tv from "./../images/retrotv.jpg";
+import { useLoaderData } from "react-router-dom";
 
 function Footer(props) {
+  //import all shows
+  const allShows = useLoaderData();
+  console.log(allShows);
+  // generate a random show
+  const rando = allShows[Math.floor(Math.random() * allShows.length)];
+  //grab that random show's url
+  const id = rando.url.split("/")[4];
+
   return (
     <div className="footer">
       <Link to={"index"} className="footer-item footer-one">
-        <button>The Whole List</button>
+        <button className="big-button">[See The Whole List]</button>
       </Link>
-      <div className="footer-item footer-two">
-        <h2>Placeholder: Roulette The List</h2>
-      </div>
-      <div className="footer-item footer-three">
-        <h2>Placeholder: graphic and info</h2>
-        <Link to="/">
-          <button>Back to main</button>
-        </Link>
-      </div>
+      <Link to={`/${id}/`} className="footer-item footer-two router-link">
+        <img className="retro-pin" src={tv} alt="retro tv" />
+        <h4 id="add-it">[Play Roulette with The List]</h4>
+      </Link>
+
+      <Link className="router-link footer-item footer-three" to="/create/">
+        <button className="big-button">[Add it to The List]</button>
+      </Link>
     </div>
   );
 }
