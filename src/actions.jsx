@@ -11,7 +11,7 @@ export const CreateAction = async ({ request }) => {
   const newShow = {
     name: formData.get("name"),
     type: formData.get("type"),
-    genre: "drama",
+    genre: formData.get("genre"),
     recby: formData.get("recby"),
     watched: false,
   };
@@ -23,7 +23,7 @@ export const CreateAction = async ({ request }) => {
     },
     body: JSON.stringify(newShow),
   });
-  return redirect("/");
+  return redirect("/index/");
 };
 
 //Update action
@@ -34,8 +34,8 @@ export const UpdateAction = async ({ request, params }) => {
 
   const updatedShow = {
     name: formData.get("name"),
-    type: "tv show",
-    genre: "drama",
+    type: formData.get("type"),
+    genre: formData.get("genre"),
     recby: formData.get("recby"),
   };
 
@@ -46,7 +46,7 @@ export const UpdateAction = async ({ request, params }) => {
     },
     body: JSON.stringify(updatedShow),
   });
-  return redirect("/");
+  return redirect(`/${id}`);
 };
 
 //Delete action

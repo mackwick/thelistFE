@@ -5,21 +5,24 @@ function Show(props) {
   const aShow = useLoaderData();
   const id = aShow.url.split("/")[4];
   return (
-    <>
-      <div className="show">
+    <div className="show-container">
+      <div className="show-info">
         <h2>{aShow.name}</h2>
+        <h3>({aShow.type})</h3>
+        <h4>
+          <b>Genre:</b> {aShow.genre}
+        </h4>
+        <h4>
+          <b>Recommended by:</b> {aShow.recby}
+        </h4>
       </div>
-
-      <Link to="/">
-        <button>Back to main</button>
-      </Link>
-
-      <UpdateForm />
-
-      <Form action={`/delete/${id}/`} method="post">
-        <button>Delete show</button>
-      </Form>
-    </>
+      <div className="show-options">
+        <UpdateForm />
+        <Form action={`/delete/${id}/`} method="post">
+          <button>Delete this.</button>
+        </Form>
+      </div>
+    </div>
   );
 }
 
