@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   background-color: var(--primary-light);
   padding: 0.75rem;
-  height: 70dvh;
+  height: 75dvh;
   width: 65dvw;
   align-content: center;
 }
@@ -339,6 +339,8 @@ select {
 /* RESPONSIVENES */
 /**************************************************************/
 
+/*-----------------------1450px------------------------------*/
+
 @media screen and (max-width: 1450px) {
   .App {
     height: 95dvh;
@@ -356,11 +358,9 @@ select {
   Form > fieldset {
     margin: 0.5rem;
   }
-
-  .router-link > .retro-pin {
-    display: none;
-  }
 }
+
+/*-----------------------950px------------------------------*/
 
 @media screen and (max-width: 951px) {
   .genre-container {
@@ -387,7 +387,6 @@ select {
 
   .form-container {
     padding: 0.5rem;
-    font-size: 14px;
   }
 
   .form-container > .form-itself {
@@ -396,107 +395,55 @@ select {
 
   Form > fieldset {
     margin: 0.5rem;
-  }
-
-  .router-link > .retro-pin {
-    display: none;
-  }
-
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .genre-top,
   .genre-bottom {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 100%;
-    width: 100%;
   }
 
-  .radio-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .genre-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  .footer-item > .big-button {
+    height: 50%;
+    width: 90%;
+    font-size: 12px;
   }
 }
 
-/* 
-@media screen and (max-width: 951px) {
+/*-----------------------700px------------------------------*/
+
+@media screen and (max-width: 700px) {
+  body {
+    background-size: 250%;
+  }
+
   .App {
-    height: 95dvh;
+    padding: 0.25;
+    height: 100dvh;
+    width: 80dvh;
+    align-content: center;
   }
-
-  .genre-container {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-one,
-.genre-one {
-  border-right: 2px solid var(--primary-brown);
-}
-
-.footer-three,
-.genre-three {
-  border-left: 2px solid var(--primary-brown);
-}
 
   .form-container {
-    padding: 0;
+    padding: 5px 0;
     font-size: 14px;
   }
 
   .form-container > .form-itself {
     padding: 0;
   }
+}
 
-  Form > fieldset {
-    margin: 0.5rem;
+/*-----------------------500px------------------------------*/
+
+@media screen and (max-width: 500px) {
+  .footer-one,
+  .genre-one {
+    border: none;
   }
 
-  .router-link > .retro-pin {
-    display: none;
+  .footer-three,
+  .genre-three {
+    border: none;
   }
-
-.footer {
-  flex-direction: row;
-  justify-content: space-between;
 }
-
-.genre-top,
-.genre-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 100%;
-  width: 100%;
-}
-
-.radio-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.genre-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-} */
