@@ -24,7 +24,7 @@ body {
     ),
     url(./images/90688DFE-46D2-410F-969A-FCB3AE3230DA.jpeg);
   background-position: center;
-  background-size: 100%;
+  background-size: 125%;
   background-attachment: fixed;
   color: var(--primary-brown);
   font-family: "Reddit Mono", monospace;
@@ -33,7 +33,7 @@ body {
 .App {
   border-radius: 10px;
   background-color: var(--primary-light);
-  padding: 50px 80px;
+  padding: 3rem 3rem;
   height: 87dvh;
   width: 45dvw;
 }
@@ -44,7 +44,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 1rem 2rem;
 }
 
 button:hover {
@@ -62,24 +62,28 @@ button:hover {
   cursor: pointer;
 }
 
+/***********/
+/* HEADER */
+/***********/
+
 .header-container {
   border-bottom: 2px solid var(--primary-brown);
   display: grid;
   justify-items: end;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 }
 
 .header-container > .router-link > #site-heading {
   font-family: "Chicle", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 72px;
+  font-size: 5rem;
   color: var(--primary-orange);
 }
 
 .header-container > .router-link > h4 {
   text-align: right;
-  font-size: small;
+  font-size: 1rem;
   color: var(--primary-orange);
 }
 
@@ -94,18 +98,25 @@ button:hover {
   color: #dc8b20c7;
 }
 
+/***********/
+/* FOOTER */
+/***********/
+
 .footer {
   border-top: 2px solid var(--primary-brown);
-  padding-top: 20px;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
+  height: 20%;
 }
 
 .footer-item {
   width: 30%;
+  align-items: start;
+  align-content: start;
 }
 
 .footer-one,
@@ -118,42 +129,38 @@ button:hover {
   border-left: 2px solid var(--primary-brown);
 }
 
-.footer-one,
-.footer-two,
-.footer-three {
-  height: 100px;
-  font-size: 14px;
-}
-
 .router-link > .retro-pin {
-  height: 85px;
-  width: 140px;
+  height: 70%;
+  width: 65%;
+  margin-top: 2.5rem;
   border-radius: 6px;
 }
 
 .footer-item > .big-button {
-  height: 110px;
-  width: 145px;
+  height: 98%;
+  width: 65%;
   border-radius: 6px;
 }
 
-/*MAIN*/
+/***********/
+/* MAIN/LANDING */
+/***********/
 
 .genre-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .genre-top {
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
   border-bottom: 2px solid var(--primary-brown);
 }
 
 .genre-bottom {
-  padding-top: 20px;
+  padding-top: 1.5rem;
 }
 
 .genre-top,
@@ -162,23 +169,25 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 100%;
   width: 100%;
 }
 
 .genre-box {
   width: 30%;
-  height: 150px;
-  padding: 10px 10px;
+  height: 50%;
+  padding: 0.75rem;
 }
 
 .router-link > img {
-  height: 120px;
-  width: 140px;
+  height: 6.5rem;
+  width: 8.5rem;
   border-radius: 6px;
 }
 
-/*FORMS*/
+/***********/
+/* FORMS */ /*----------------------------------------GOT TO HERE-----------------------*/
+/***********/
 
 .form-container {
   padding: 10px;
@@ -232,7 +241,9 @@ select {
   border: none;
 }
 
-/*SHOW*/
+/***********/
+/* SHOW */
+/***********/
 
 .show-container {
   display: flex;
@@ -261,7 +272,9 @@ select {
   margin: 0 10px;
 }
 
-/*GENRE*/
+/***********/
+/* GENRE INDEX */
+/***********/
 
 .genre-div {
   display: flex;
@@ -300,7 +313,9 @@ select {
   scroll-behavior: smooth;
 }
 
-/*INDEX*/
+/***********/
+/* FULL INDEX */
+/***********/
 
 .index-div > h2 {
   padding: 10px 10px;
@@ -317,3 +332,42 @@ select {
   scrollbar-color: var(--primary-orange) var(--primary-light);
   scroll-behavior: smooth;
 }
+
+/**************************************************************/
+/* RESPONSIVENES */
+/**************************************************************/
+
+/* @media screen and (max-width: ) {
+
+
+
+  .App {
+  border-radius: 10px;
+  background-color: var(--primary-light);
+  padding: 50px 80px;
+  height: 87dvh;
+  width: 45dvw;
+}
+
+.footer {
+  border-top: 2px solid var(--primary-brown);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+
+.genre-top,
+.genre-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+}
+
+} */
