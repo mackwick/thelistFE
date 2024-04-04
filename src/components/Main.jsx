@@ -35,13 +35,13 @@ function Main(props) {
         <div className="genre-box genre-one">
           <Link className="router-link" to="/horror/">
             <img src={creepydoll} alt="creepy doll pic" />
-            <h3>Horror/Thriller</h3>
+            <h3>Horror/ Thriller</h3>
           </Link>
         </div>
         <div className="genre-box genre-two">
           <Link className="router-link" to="/reality/">
             <img src={reality} alt="reality" />
-            <h3>Reality/Docs</h3>
+            <h3>Reality/ Docs</h3>
           </Link>
         </div>
         <div className="genre-box genre-three">
