@@ -36,6 +36,7 @@ body {
   padding: 0.75rem;
   height: 70dvh;
   width: 65dvw;
+  align-content: center;
 }
 
 button {
@@ -130,10 +131,11 @@ button:hover {
 }
 
 .router-link > .retro-pin {
-  height: 70%;
+  display: none;
+  /* height: 70%;
   width: 65%;
   margin-top: 2.5rem;
-  border-radius: 6px;
+  border-radius: 6px; */
 }
 
 .footer-item > .big-button {
@@ -359,11 +361,99 @@ select {
     display: none;
   }
 }
+
+@media screen and (max-width: 951px) {
+  .genre-container {
+    flex-direction: row;
+  }
+
+  .genre-top {
+    border-bottom: none;
+    border-right: 2px solid var(--primary-brown);
+  }
+
+  .genre-one {
+    border: none;
+  }
+
+  .genre-three {
+    border: none;
+  }
+
+  .genre-box {
+    height: 100%;
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  .form-container > .form-itself {
+    padding: 0;
+  }
+
+  Form > fieldset {
+    margin: 0.5rem;
+  }
+
+  .router-link > .retro-pin {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .genre-top,
+  .genre-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 100%;
+    width: 100%;
+  }
+
+  .radio-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .genre-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 /* 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 951px) {
   .App {
     height: 95dvh;
   }
+
+  .genre-container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-one,
+.genre-one {
+  border-right: 2px solid var(--primary-brown);
+}
+
+.footer-three,
+.genre-three {
+  border-left: 2px solid var(--primary-brown);
+}
 
   .form-container {
     padding: 0;
