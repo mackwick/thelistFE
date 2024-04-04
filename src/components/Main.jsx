@@ -41,7 +41,7 @@ function Main(props) {
         <div className="genre-box genre-two">
           <Link className="router-link" to="/reality/">
             <img src={reality} alt="reality" />
-            <h3>Reality/Documentary</h3>
+            <h3>Reality/Docs</h3>
           </Link>
         </div>
         <div className="genre-box genre-three">

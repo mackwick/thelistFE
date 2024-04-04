@@ -46,7 +46,7 @@ export const UpdateAction = async ({ request, params }) => {
     },
     body: JSON.stringify(updatedShow),
   });
-  return redirect(`/${id}`);
+  return redirect(`/index/`);
 };
 
 //Delete action

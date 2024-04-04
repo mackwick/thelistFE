@@ -7,11 +7,7 @@ function UpdateForm(props) {
   return (
     <>
       <div className="form-container">
-        <div className="form-heading">
-          <h2>Change something.</h2>
-        </div>
-
-        <div className="form-itself">
+        <div className="form-itself update-form">
           <Form action={`/update/${id}/`} method="post">
             <fieldset className="form-section">
               <label htmlFor="name">Name:</label>
@@ -26,60 +22,76 @@ function UpdateForm(props) {
             <fieldset name="type" id="type" className="form-section">
               <label htmlFor="type">Is it a TV show or a movie?</label>
 
-              <div>
-                <input
-                  type="radio"
-                  id="tv show"
-                  name="type"
-                  value="tv show"
-                  checked
-                />
-                <label for="tv show">TV Show</label>
-              </div>
+              <div className="radio-buttons">
+                <div>
+                  <input
+                    type="radio"
+                    id="tv show"
+                    name="type"
+                    value="tv show"
+                    checked
+                  />
+                  <label for="tv show">TV Show</label>
+                </div>
 
-              <div>
-                <input type="radio" id="movie" name="type" value="movie" />
-                <label for="movie">Movie</label>
+                <div>
+                  <input type="radio" id="movie" name="type" value="movie" />
+                  <label for="movie">Movie</label>
+                </div>
               </div>
             </fieldset>
 
             <fieldset name="genre" id="genre" className="form-section">
               <label htmlFor="genre">What's its genre?</label>
+              <div className="radio-buttons">
+                <div className="first-three">
+                  <div>
+                    <input
+                      type="radio"
+                      id="comedy"
+                      name="genre"
+                      value="comedy"
+                      checked
+                    />
+                    <label for="comedy">Comedy</label>
+                  </div>
 
-              <div>
-                <input
-                  type="radio"
-                  id="comedy"
-                  name="genre"
-                  value="comedy"
-                  checked
-                />
-                <label for="comedy">Comedy</label>
-              </div>
+                  <div>
+                    <input type="radio" id="drama" name="genre" value="drama" />
+                    <label for="drama">Drama</label>
+                  </div>
 
-              <div>
-                <input type="radio" id="drama" name="genre" value="drama" />
-                <label for="drama">Drama</label>
-              </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="horror"
+                      name="genre"
+                      value="horror"
+                    />
+                    <label for="horror">Horror/Thriller</label>
+                  </div>
+                </div>
+                <div className="last-three">
+                  <div>
+                    <input
+                      type="radio"
+                      id="reality"
+                      name="genre"
+                      value="reality"
+                    />
+                    <label for="reality">Reality/Documentary</label>
+                  </div>
 
-              <div>
-                <input type="radio" id="horror" name="genre" value="horror" />
-                <label for="horror">Horror/Thriller</label>
-              </div>
+                  <div>
+                    <input type="radio" id="scifi" name="genre" value="scifi" />
+                    <label for="scifi">Science Fiction</label>
+                  </div>
 
-              <div>
-                <input type="radio" id="reality" name="genre" value="reality" />
-                <label for="reality">Reality/Documentary</label>
-              </div>
-
-              <div>
-                <input type="radio" id="scifi" name="genre" value="scifi" />
-                <label for="scifi">Science Fiction</label>
-              </div>
-
-              <div>
-                <input type="radio" id="other" name="genre" value="other" />
-                <label for="other">Other/Unsure</label>
+                  <div>
+                    <input type="radio" id="other" name="genre" value="other" />
+                    <label for="other">Other/Unsure</label>
+                  </div>
+                </div>
               </div>
             </fieldset>
 

@@ -30,10 +30,12 @@ body {
   font-family: "Reddit Mono", monospace;
 }
 
-.contentContainer {
+.App {
   border-radius: 10px;
   background-color: var(--primary-light);
   padding: 50px 80px;
+  height: 87dvh;
+  width: 45dvw;
 }
 
 button {
@@ -220,6 +222,16 @@ select {
   width: 30%;
 }
 
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.update-form {
+  border: none;
+}
+
 /*SHOW*/
 
 .show-container {
@@ -229,7 +241,7 @@ select {
 
 .show-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary-brown);
   padding: 20px 10px;
@@ -247,4 +259,61 @@ select {
   width: 200px;
   height: 50px;
   margin: 0 10px;
+}
+
+/*GENRE*/
+
+.genre-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.genre-title {
+  margin: 20px 20px;
+  border-right: 2px solid var(--primary-brown);
+  padding-right: 40px;
+}
+
+.genre-title > h2,
+.index-div > h2 {
+  font-size: 48px;
+  color: var(--primary-orange);
+  padding-bottom: 20px;
+}
+
+.genre-pic {
+  height: 200px;
+  width: 200px;
+  border-radius: 6px;
+}
+
+.genre-list {
+  margin: 10px 0;
+  font-size: 12px;
+  overflow: scroll;
+  max-height: 40dvh;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-orange) var(--primary-light);
+  scroll-behavior: smooth;
+}
+
+/*INDEX*/
+
+.index-div > h2 {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--primary-brown);
+}
+
+.index-div > .whole-list {
+  margin: 10px 0;
+  font-size: 12px;
+  overflow: scroll;
+  max-height: 30dvh;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-orange) var(--primary-light);
+  scroll-behavior: smooth;
 }

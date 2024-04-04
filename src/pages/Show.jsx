@@ -13,11 +13,8 @@ function Show(props) {
   const id = aShow.url.split("/")[4];
   return (
     <div className="show-container">
-      <div className="show-info">
-        <div className="show-image">
-          <h2>placeholder</h2>
-        </div>
-        <div className="show-deets">
+      {!visibleform && (
+        <div className="show-info">
           <h2>{aShow.name}</h2>
           <h3>({aShow.type})</h3>
           <h4>
@@ -27,7 +24,9 @@ function Show(props) {
             <b>Recommended by:</b> {aShow.recby}
           </h4>
         </div>
-      </div>
+      )}
+
+      {visibleform && <UpdateForm />}
 
       <div className="show-options">
         <Form action={`/delete/${id}/`} method="post">
@@ -37,7 +36,6 @@ function Show(props) {
         <button onClick={toggleForm}>
           {visibleform ? "Nevermind." : "Edit this."}
         </button>
-        {visibleform && <UpdateForm />}
       </div>
     </div>
   );
