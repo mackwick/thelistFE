@@ -404,6 +404,8 @@ select {
   .genre-bottom {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
   }
 
   .footer-item > .big-button {
@@ -421,10 +423,24 @@ select {
   }
 
   .App {
+    width: 80dvw;
     padding: 0.25;
+    overflow: scroll;
     height: 100dvh;
-    width: 80dvh;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) var(--primary-light);
+    scroll-behavior: smooth;
     align-content: center;
+  }
+
+  .header-container {
+    justify-items: center;
+    padding-top: 5px;
+  }
+
+  .header-container > .router-link > #site-heading {
+    font-size: 4rem;
   }
 
   .form-container {
@@ -435,35 +451,63 @@ select {
   .form-container > .form-itself {
     padding: 0;
   }
+
+  .genre-top,
+  .genre-bottom {
+    justify-content: ;
+  }
+
+  .genre-pic {
+    display: none;
+  }
+
+  .genre-title {
+    border-right: none;
+    border-bottom: 2px solid var(--primary-brown);
+    padding-right: 0;
+  }
+
+  .genre-div {
+    flex-direction: column;
+  }
+
+  .show-options {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .show-options > button,
+  .show-options button {
+    width: 12rem;
+    height: 3rem;
+    margin: 5px auto;
+  }
 }
 
-/*-----------------------550px------------------------------*/
+/*-----------------------565px------------------------------*/
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 565px) {
   .genre-bottom,
   .genre-top {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
   }
 
   .genre-box {
     margin: 0;
     padding: 3px 0;
-  }
-
-  .header-container {
-    justify-items: center;
+    font-size: 14px;
   }
 
   .header-container > .router-link > #site-heading {
-    font-size: 4rem;
-    color: var(--primary-orange);
+    font-size: 3.5rem;
   }
 
   .header-container > .router-link > h4 {
     text-align: center;
     font-size: 1rem;
-    color: var(--primary-orange);
   }
 
   .footer-one,
@@ -476,12 +520,61 @@ select {
     border: none;
   }
 
+  .footer-item {
+    width: 100%;
+  }
+
+  .add-button > Button,
+  .update-button > Button {
+    width: 100%;
+  }
   .footer-item > .big-button {
-    height: 70%;
-    width: 60%;
+    height: 40px;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer {
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
+  }
+
+  .radio-buttons {
+    flex-direction: column;
+  }
+}
+
+/*-----------------------450px------------------------------*/
+
+@media screen and (max-width: 450px) {
+  .header-container > .router-link > #site-heading {
+    font-size: 3rem;
+  }
+
+  .genre-container {
+    flex-direction: column;
+  }
+
+  .genre-top {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .genre-bottom {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .router-link > .other-pic {
+    display: none;
+  }
+
+  .router-link > .drama-pic {
+    height: 100px;
+    width: 200px;
   }
 }
