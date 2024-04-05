@@ -1,14 +1,16 @@
 # The List - Unit 4 Mini Project
 
 - **App Name: The List Roulette**
-- **Description: A stylish application that allows the user to keep track of shows and movies they told people they would watch and to generate a random show/movie by genre when they just don't know what to watch next.**
+- **Description: A stylish application that allows the user to keep track of shows and movies they told people they would watch and to generate a random show/movie when they just don't know where to start.**
 
-- ![GitHub Url](https://github.com/mackwick/thelistFE)
-- Deployed Frontend:
+- GitHub: https://github.com/mackwick/thelistFE
+- Deployed Frontend: https://thelistroulette.netlify.app/
 
-## List of Dependencies
+## Dependencies
 
-- TBD
+- React
+- React-Dom
+- React-Router-Dom
 
 ## Component Heirarchy
 
