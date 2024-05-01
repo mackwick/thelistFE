@@ -16,6 +16,7 @@ import Horror from "./components/Horror";
 import Other from "./components/Other";
 import Reality from "./components/Reality";
 import Scifi from "./components/Scifi";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,8 +29,35 @@ const router = createBrowserRouter(
       <Route path="other" element={<Other />} loader={indexLoader} />
       <Route path="reality" element={<Reality />} loader={indexLoader} />
       <Route path="scifi" element={<Scifi />} loader={indexLoader} />
-      <Route path="/:id" element={<Show />} loader={showLoader} />
-      <Route path="create" element={<CreateForm />} action={CreateAction} />
+      <Route
+        path="/:id"
+        element={
+          <>
+            <SignedIn>
+              <Show />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+        loader={showLoader}
+      />
+
+      <Route
+        path="create"
+        element={
+          <>
+            <SignedIn>
+              <CreateForm />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+        }
+        action={CreateAction}
+      />
       <Route path="update/:id" action={UpdateAction} />
       <Route path="delete/:id" action={DeleteAction} />
     </Route>

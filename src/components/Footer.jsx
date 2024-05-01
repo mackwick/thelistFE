@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import tv from "./../images/retrotv.jpg";
 import { useLoaderData } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 
 function Footer(props) {
+  const { user } = useUser();
   //import all shows
   const allShows = useLoaderData();
+  const userShows = allShows.filter((x) => {
+    return x.user === user?.id;
+  });
   console.log(allShows);
   // generate a random show
-  const rando = allShows[Math.floor(Math.random() * allShows.length)];
+  const rando = allShows[Math.floor(Math.random() * userShows.length)];
   //grab that random show's url
   const id = rando.url.split("/")[4];
 

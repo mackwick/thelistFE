@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 body {
   text-align: center;
   display: flex;
@@ -63,6 +67,11 @@ button:hover {
   cursor: pointer;
 }
 
+.filler-text {
+  font-size: 20px;
+  color: var(--primary-orange);
+}
+
 /***********/
 /* HEADER */
 /***********/
@@ -82,10 +91,14 @@ button:hover {
   color: var(--primary-orange);
 }
 
-.header-container > .router-link > h4 {
+.header-container > .router-link > h4,
+.header-container > button {
+  background: none;
   text-align: right;
-  font-size: 1rem;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--primary-orange);
+  padding: 0;
 }
 
 .router-link > #add-it {
@@ -95,8 +108,13 @@ button:hover {
 
 .header-container > .router-link > h4:hover,
 .header-container > .router-link > #site-heading:hover,
-.router-link > #add-it:hover {
+.router-link > #add-it:hover,
+.header-container > button:hover {
   color: #dc8b20c7;
+}
+
+.cl-rootBox {
+  padding: 5px 10px 0 0;
 }
 
 /***********/
@@ -422,6 +440,11 @@ select {
     background-size: 250%;
   }
 
+  .header-container > .router-link > h4 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
   .App {
     width: 80dvw;
     padding: 0.25;
@@ -452,10 +475,10 @@ select {
     padding: 0;
   }
 
-  .genre-top,
+  /* .genre-top,
   .genre-bottom {
     justify-content: ;
-  }
+  } */
 
   .genre-pic {
     display: none;

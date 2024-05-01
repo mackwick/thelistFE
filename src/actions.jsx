@@ -13,6 +13,7 @@ export const CreateAction = async ({ request }) => {
     type: formData.get("type"),
     genre: formData.get("genre"),
     recby: formData.get("recby"),
+    user: formData.get("user"),
     watched: false,
   };
 
@@ -37,6 +38,7 @@ export const UpdateAction = async ({ request, params }) => {
     type: formData.get("type"),
     genre: formData.get("genre"),
     recby: formData.get("recby"),
+    user: formData.get("user"),
   };
 
   await fetch(`${URL}${id}/`, {

@@ -1,6 +1,9 @@
 import { Form } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 
 function CreateForm(props) {
+  const { user } = useUser();
+
   return (
     <>
       <div className="form-container">
@@ -10,6 +13,17 @@ function CreateForm(props) {
 
         <div className="form-itself">
           <Form action="/create" method="post">
+            <label htmlFor="user" className="hide">
+              User
+              <input
+                type="text"
+                name="user"
+                id="user"
+                defaultValue={user?.id || "non-user"}
+                className="hide"
+              />
+            </label>
+
             <fieldset className="form-section">
               <label htmlFor="name">Name: </label>
               <input type="text" name="name" id="name" />

@@ -1,14 +1,26 @@
 import { Form, useLoaderData } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 
 function UpdateForm(props) {
   const aShow = useLoaderData();
   const id = aShow.url.split("/")[4];
+  const { user } = useUser();
 
   return (
     <>
       <div className="form-container">
         <div className="form-itself update-form">
           <Form action={`/update/${id}/`} method="post">
+            <label htmlFor="user" className="hide">
+              User
+              <input
+                type="text"
+                name="user"
+                id="user"
+                defaultValue={user?.id || "non-user"}
+                className="hide"
+              />
+            </label>
             <fieldset className="form-section">
               <label htmlFor="name">Name:</label>
               <input

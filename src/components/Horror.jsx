@@ -1,23 +1,45 @@
 import Show from "../components/Show";
 import { useLoaderData, Link } from "react-router-dom";
 import horro from "./../images/creepydoll.jpg";
+import { useUser } from "@clerk/clerk-react";
 
 function Horror(props) {
+  const { user } = useUser();
   const allShows = useLoaderData();
-  const horrors = allShows.filter((show) => show.genre === "horror");
-  return (
-    <div className="genre-div">
-      <div className="genre-title">
-        <h2>Horror</h2>
-        <img src={horro} alt="scary bb" className="genre-pic" />
+  const userShows = allShows.filter((x) => {
+    return x.user === user?.id;
+  });
+  const horrors = userShows.filter((show) => show.genre === "horror");
+
+  if (horrors.length === 0) {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Horror / Thriller</h2>
+          <img src={horro} alt="scary bb" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          <p className="filler-text">
+            Nothing to see here! Add some horrors or thrillers to your list.
+          </p>
+        </div>
       </div>
-      <div className="genre-list">
-        {horrors.map((show, i) => (
-          <Show show={show} key={i} />
-        ))}
+    );
+  } else {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Horror / Thriller</h2>
+          <img src={horro} alt="scary bb" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          {horrors.map((show, i) => (
+            <Show show={show} key={i} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Horror;

@@ -1,23 +1,45 @@
 import Show from "../components/Show";
 import { useLoaderData, Link } from "react-router-dom";
 import realitypic from "./../images/reality.jpg";
+import { useUser } from "@clerk/clerk-react";
 
 function Reality(props) {
+  const { user } = useUser();
   const allShows = useLoaderData();
-  const reality = allShows.filter((show) => show.genre === "reality");
-  return (
-    <div className="genre-div">
-      <div className="genre-title">
-        <h2>Reality/Docs</h2>
-        <img src={realitypic} alt="ladies walking" className="genre-pic" />
+  const userShows = allShows.filter((x) => {
+    return x.user === user?.id;
+  });
+  const reality = userShows.filter((show) => show.genre === "reality");
+
+  if (reality.length === 0) {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Reality / Docs</h2>
+          <img src={realitypic} alt="ladies walking" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          <p className="filler-text">
+            Nothing to see here! Add some docs or reality shows to your list.
+          </p>
+        </div>
       </div>
-      <div className="genre-list">
-        {reality.map((show, i) => (
-          <Show show={show} key={i} />
-        ))}
+    );
+  } else {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Reality / Docs</h2>
+          <img src={realitypic} alt="ladies walking" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          {reality.map((show, i) => (
+            <Show show={show} key={i} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Reality;

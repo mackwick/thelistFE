@@ -1,23 +1,47 @@
 import Show from "../components/Show";
 import { useLoaderData, Link } from "react-router-dom";
 import comedy from "./../images/comedy.jpg";
+import { useUser } from "@clerk/clerk-react";
 
 function Comedy(props) {
+  const { user } = useUser();
   const allShows = useLoaderData();
-  const comedies = allShows.filter((show) => show.genre === "comedy");
-  return (
-    <div className="genre-div">
-      <div className="genre-title">
-        <h2>Comedy</h2>
-        <img src={comedy} alt="comedy" className="genre-pic" />
+
+  const userShows = allShows.filter((x) => {
+    return x.user === user?.id;
+  });
+
+  const comedies = userShows.filter((show) => show.genre === "comedy");
+
+  if (comedies.length === 0) {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Comedy</h2>
+          <img src={comedy} alt="comedy" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          <p className="filler-text">
+            Nothing to see here! Add some comedies to your list.
+          </p>
+        </div>
       </div>
-      <div className="genre-list">
-        {comedies.map((show, i) => (
-          <Show show={show} key={i} />
-        ))}
+    );
+  } else {
+    return (
+      <div className="genre-div">
+        <div className="genre-title">
+          <h2>Comedy</h2>
+          <img src={comedy} alt="comedy" className="genre-pic" />
+        </div>
+        <div className="genre-list">
+          {comedies.map((show, i) => (
+            <Show show={show} key={i} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Comedy;
