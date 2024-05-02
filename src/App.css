@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  min-height: 100dvh;
   background-image: linear-gradient(
       rgba(194, 114, 16, 0.3),
       rgba(194, 114, 16, 0.3)
@@ -38,8 +38,8 @@ body {
   border-radius: 10px;
   background-color: var(--primary-light);
   padding: 0.75rem;
-  height: 75dvh;
-  width: 65dvw;
+  min-height: 75dvh;
+  min-width: 65dvw;
   align-content: center;
 }
 
@@ -361,7 +361,7 @@ select {
 
 @media screen and (max-width: 1450px) {
   .App {
-    height: 95dvh;
+    max-width: 80dvw;
   }
 
   .form-container {
@@ -433,7 +433,7 @@ select {
   }
 }
 
-/*-----------------------700px------------------------------*/
+/*-----------------------750px------------------------------*/
 
 @media screen and (max-width: 700px) {
   body {
@@ -449,7 +449,7 @@ select {
     width: 80dvw;
     padding: 0.25;
     overflow: scroll;
-    height: 100dvh;
+    /* min-height: 100dvh; */
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-light) var(--primary-light);
