@@ -10,27 +10,45 @@ function Footer(props) {
   const userShows = allShows.filter((x) => {
     return x.user === user?.id;
   });
-  console.log(allShows);
-  // generate a random show
-  const rando = allShows[Math.floor(Math.random() * userShows.length)];
-  //grab that random show's url
-  const id = rando.url.split("/")[4];
 
-  return (
-    <div className="footer">
-      <Link to={"index"} className="footer-item footer-one">
-        <button className="big-button">[See The Whole List]</button>
-      </Link>
-      <Link to={`/${id}/`} className="footer-item footer-two router-link">
-        <img className="retro-pin" src={tv} alt="retro tv" />
-        <h4 id="add-it">[Play Roulette with The List]</h4>
-      </Link>
+  if (userShows.length === 0) {
+    return (
+      <div className="footer">
+        <Link to={"index"} className="footer-item footer-one">
+          <button className="big-button">[See The Whole List]</button>
+        </Link>
+        <Link to={`/index/`} className="footer-item footer-two router-link">
+          <img className="retro-pin" src={tv} alt="retro tv" />
+          <h4 id="add-it">[Play Roulette with The List]</h4>
+        </Link>
 
-      <Link className="router-link footer-item footer-three" to="/create/">
-        <button className="big-button">[Add it to The List]</button>
-      </Link>
-    </div>
-  );
+        <Link className="router-link footer-item footer-three" to="/create/">
+          <button className="big-button">[Add it to The List]</button>
+        </Link>
+      </div>
+    );
+  } else {
+    // generate a random show
+    const rando = userShows[Math.floor(Math.random() * userShows.length)];
+    //grab that random show's url
+    const id = rando.url.split("/")[4];
+
+    return (
+      <div className="footer">
+        <Link to={"index"} className="footer-item footer-one">
+          <button className="big-button">[See The Whole List]</button>
+        </Link>
+        <Link to={`/${id}/`} className="footer-item footer-two router-link">
+          <img className="retro-pin" src={tv} alt="retro tv" />
+          <h4 id="add-it">[Play Roulette with The List]</h4>
+        </Link>
+
+        <Link className="router-link footer-item footer-three" to="/create/">
+          <button className="big-button">[Add it to The List]</button>
+        </Link>
+      </div>
+    );
+  }
 }
 
 export default Footer;

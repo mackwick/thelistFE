@@ -20,7 +20,10 @@ function Other(props) {
         </div>
         <div className="genre-list">
           <p className="filler-text">
-            Nothing to see here! Add some weird stuff to your list.
+            Nothing to see here!{" "}
+            <Link className="router-link" to="/create/">
+              <b>Add some weird stuff to your list.</b>
+            </Link>
           </p>
         </div>
       </div>

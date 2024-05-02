@@ -16,7 +16,10 @@ function Index(props) {
         <h2>The List</h2>
         <div className="whole-list">
           <p className="filler-text">
-            Nothing to see here! Add some stuff to your list.
+            Nothing to see here!{" "}
+            <Link className="router-link" to="/create/">
+              <b>Add something to your list.</b>
+            </Link>
           </p>
         </div>
       </div>
