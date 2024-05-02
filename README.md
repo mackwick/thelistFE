@@ -11,6 +11,14 @@
 - React
 - React-Dom
 - React-Router-Dom
+- Clerk
+
+## Assets from:
+
+- Pixabay
+- Unsplash
+- Pexels
+- Google Fonts
 
 ## Component Heirarchy
 
